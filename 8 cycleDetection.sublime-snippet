@@ -1,0 +1,28 @@
+<snippet>
+	<content><![CDATA[
+// cycleDetection returns true means there is a cycle exist
+const int nodes=2e3+7;
+vector<int>graph[nodes+1];
+bool is_visited[nodes+1];
+
+bool cycleDetection(int node, int parent) {
+    is_visited[node]=1;
+    
+    for(auto child: graph[node]) {
+        if(is_visited[child] == 0) {
+            if(cycleDetection(child, node) == true)
+                return true;
+        }
+        else if(parent != child) return true;
+    }
+    
+    return false;
+}
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>__cycleDetection</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

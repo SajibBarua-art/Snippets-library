@@ -1,0 +1,39 @@
+<snippet>
+	<content><![CDATA[
+const int nodes = 1e5+5;
+
+int par[nodes], Rank[nodes];
+
+int findParent(int node) {
+    if(par[node]<0) return node;
+
+    // using path compression
+    return par[node] = findParent(par[node]);
+}
+
+void merge(int a, int b) {
+    a = findParent(a); b = findParent(b);
+
+    // using union by rank
+    if(Rank[a] > Rank[b]) {
+        // a would be parent
+        par[b] = a;
+    	Rank[a] += Rank[b];
+        return;
+    }
+    else {
+        // b would be parent
+        par[a] = b;
+    	Rank[b] += Rank[a];
+        return;
+    }
+}
+
+// pre-initialization
+// for(int i=1; i<=n; i++) par[i] = -i, Rank[i] = 1;
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>__dsu</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>

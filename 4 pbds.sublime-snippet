@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+/// Policy Based Data Structure 
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+#include <ext/pb_ds/detail/standard_policies.hpp>
+using namespace __gnu_pbds;
+typedef tree< ll, null_type, less_equal<ll>, rb_tree_tag, tree_order_statistics_node_update > ordered_set; 
+
+/// os.find_by_order(x) find the number in  index x [ 0 based] and return an iterator at that index
+/// os.order_of_key(y) count the numbers that are strictly less than y
+
+/// less_equal => multiset
+/// less => set
+/// greater => set but in descending order
+/// greater_equal => multiset but in descending order
+
+/**************************************************************start**************************************************************/
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>__pbds</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

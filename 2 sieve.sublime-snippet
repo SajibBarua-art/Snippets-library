@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+const int maxN = 2e5+5;
+bool prime[maxN+5];
+
+void sieve()
+{
+    memset(prime, true, sizeof(prime));
+ 
+    for (int p = 2; p * p <= maxN; p++) {
+        if (prime[p] == true) {
+            for (int i = p * p; i <= maxN; i += p)
+                prime[i] = false;
+        }
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>__sieve</tabTrigger> 
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
