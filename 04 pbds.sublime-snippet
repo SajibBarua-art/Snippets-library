@@ -15,6 +15,13 @@ typedef tree< ll, null_type, less_equal<ll>, rb_tree_tag, tree_order_statistics_
 /// greater => set but in descending order
 /// greater_equal => multiset but in descending order
 
+// to erase a value from a multiset
+// void myerase(ordered_set &t, int v){
+//     int rank = t.order_of_key(v); // Number of elements that are less than v in t
+//     ordered_set::iterator it = t.find_by_order(rank); // Iterator that points to the (rank+1)th element in t
+//     t.erase(it);
+// }
+
 /**************************************************************start**************************************************************/
 
 ]]></content>

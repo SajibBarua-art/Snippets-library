@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+using namespace std;
+
+// gp_hash_table<int, int> mp;
+
+// faster than unordered map, work in O(1)
+// slower Read/Write but faster insert/delete/clear (cc_hash_table: opposite performance)
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>__gpHashTable</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
